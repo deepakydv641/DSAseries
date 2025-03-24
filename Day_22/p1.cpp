@@ -19,3 +19,6 @@ public:
         
     return st.size();}
 };
+
+//  t(c)=o(n)
+//  s(c)=o(n)
