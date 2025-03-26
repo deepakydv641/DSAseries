@@ -1,6 +1,6 @@
 //Partition Labels
 
-//approach 2
+//approach 1
 class Solution {
 public:
     vector<int> partitionLabels(string s) {
