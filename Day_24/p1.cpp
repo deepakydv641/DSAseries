@@ -1,5 +1,33 @@
 //Partition Labels
-//approach 1
+
+//approach 2
+class Solution {
+public:
+    vector<int> partitionLabels(string s) {
+        map<char,int>mp;
+        for(int i=0;i<s.size();i++){
+            mp[s[i]]++;
+        }
+        map<char,int>mpp;
+        vector<int>v;
+        int k=0;
+        for(int i=0;i<s.size();i++){
+            mpp[s[i]]++;
+            if(mpp[s[i]]==mp[s[i]]){
+                mpp.erase(s[i]);
+            }
+            if(mpp.size()==0){
+                v.push_back(i+1-k);
+                k=i+1;
+            }
+        }
+     return v; }
+};
+
+// T(c)=O(n)
+//S(c)=O(1)
+
+//brute force approach
 
 class Solution {
 public:
