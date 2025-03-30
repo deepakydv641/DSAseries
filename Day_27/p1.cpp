@@ -23,3 +23,6 @@ class Solution {
         }
     return dummy->next;}
 };
+
+//   T(c)=O(n)
+//   S(c)=O(n)
