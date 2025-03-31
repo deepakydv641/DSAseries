@@ -1,5 +1,33 @@
 //Linked List Cycle
-//approach-1
+
+//approach-2
+
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        if(head==NULL){
+            return false;
+        }
+        map<ListNode*,int>mpp;
+        ListNode*temp=head;
+        while(temp!=NULL){
+            mpp[temp]++;
+            if(mpp[temp]>1){
+                return true;
+            }
+            if(temp->next==NULL){
+                return false;
+            }
+            temp=temp->next;
+        }
+   return false; }
+};
+
+// T(c)=O(n)
+// S(c)=O(n)
+
+
+//approach-3
 
 class Solution {
 public:
