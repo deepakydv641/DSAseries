@@ -44,3 +44,6 @@ public:
          }
     return dummy->next;}
 };
+
+//  T(c)=O(max(m,n))
+//  S(c)=O(max(m,n))
