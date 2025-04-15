@@ -1,8 +1,9 @@
 //Rotate List  :   https://leetcode.com/problems/rotate-list/description/
 
 //  approach 1 = by converting single linked list to circular linked list
-class Solution {
+ class Solution {
 public:
+
     ListNode* rotateRight(ListNode* head, int k) {
         if(head==NULL||head->next==NULL){
             return head;
@@ -23,11 +24,6 @@ public:
         while(z>1){
             temp=temp->next;
             z--;
-        }
-        map<ListNode*,int>mpp;
-        while(mpp[temp]<1){
-            mpp[temp]++;
-            temp=temp->next;
         }
         head=temp->next;
         temp->next=NULL;
