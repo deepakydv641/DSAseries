@@ -31,7 +31,7 @@ public:
 };
 
 //  T(c)=O(n)
-//  S(c)=O(n)
+//  S(c)=O(1)
 
 // approach=2
 class Solution {
