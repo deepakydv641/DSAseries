@@ -31,7 +31,7 @@ public:
     return head;}
 };
 
-//  T(c)=O(n)
+//  T(c)=O(n*k)
 //  S(c)=O(1)
 
 //  approach 2 = by converting single linked list to circular linked list
