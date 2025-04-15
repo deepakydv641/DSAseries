@@ -1,6 +1,40 @@
 //Rotate List  :   https://leetcode.com/problems/rotate-list/description/
 
-//  approach = by converting single linked list to circular linked list
+// approach=1
+class Solution {
+public:
+    ListNode* rotateRight(ListNode* head, int k) {
+        ListNode*temp=head;
+        int size=0;
+        while(temp!=NULL){
+            size++;
+            temp=temp->next;
+        }
+        if(k==0||head==NULL){
+            return head;
+        }
+        k=k%size;
+        while(k>0){
+            temp=head;
+            ListNode*prev=new ListNode(0);
+            prev->next=head;
+            while(temp->next!=NULL){
+                prev=prev->next;
+                temp=temp->next;
+            }
+            ListNode*nn=new ListNode(temp->val);
+            nn->next=head;
+            head=nn;
+            prev->next=NULL;
+            k--;
+        }
+    return head;}
+};
+
+//  T(c)=O(n)
+//  S(c)=O(1)
+
+//  approach 2 = by converting single linked list to circular linked list
 class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
