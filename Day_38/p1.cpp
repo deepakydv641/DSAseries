@@ -20,5 +20,4 @@ public:
         return v;}
 };
 
-//  T(c)=O(n log n + 2^n × n)
-//  S(c)=O(2^n × n)  // for storing results
+
