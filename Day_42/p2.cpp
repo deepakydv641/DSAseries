@@ -17,3 +17,6 @@ public:
         return cnt+1;
     }
 };
+
+//  T(C)=O(1)
+//  S(C)=O(1)
